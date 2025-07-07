@@ -1,0 +1,19 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/root/cutlass/include/**",
+                "/root/cutlass/tools/util/**",
+                
+            ],
+            "defines": [],
+            "compilerPath": "/opt/rh/devtoolset-11/root/usr/bin/gcc",
+            "cStandard": "c17",
+            "cppStandard": "gnu++17",
+            "intelliSenseMode": "linux-gcc-x64"
+        }
+    ],
+    "version": 4
+}

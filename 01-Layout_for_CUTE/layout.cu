@@ -21,8 +21,6 @@ int main(int argc, char const *argv[])
     cute::print(shape_var1);
     printf("\n");
 
-
-
     // 常量stride
     auto stride = cute::make_stride(cute::Int<1>{}, cute::Int<8>{});
     printf("常量stride: ");
@@ -66,7 +64,6 @@ int main(int argc, char const *argv[])
     printf("layout详细信息: ");
     cute::print_layout(layout);
     printf("\n");
-
 
     return 0;
 }

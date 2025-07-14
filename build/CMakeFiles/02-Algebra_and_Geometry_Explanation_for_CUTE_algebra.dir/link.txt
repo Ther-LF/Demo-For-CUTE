@@ -1,0 +1,1 @@
+/opt/rh/devtoolset-11/root/usr/bin/g++ @CMakeFiles/02-Algebra_and_Geometry_Explanation_for_CUTE_algebra.dir/objects1.rsp -o 02-Algebra_and_Geometry_Explanation_for_CUTE/algebra @CMakeFiles/02-Algebra_and_Geometry_Explanation_for_CUTE_algebra.dir/linkLibs.rsp -L"/usr/local/cuda/targets/x86_64-linux/lib/stubs" -L"/usr/local/cuda/targets/x86_64-linux/lib"

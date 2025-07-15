@@ -129,19 +129,6 @@ depend:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/01-Layout_for_CUTE_layout.dir/build.make CMakeFiles/01-Layout_for_CUTE_layout.dir/build
 .PHONY : 01-Layout_for_CUTE_layout/fast
 
-#=============================================================================
-# Target rules for targets named 02-Algebra_and_Geometry_Explanation_for_CUTE_algebra
-
-# Build rule for target.
-02-Algebra_and_Geometry_Explanation_for_CUTE_algebra: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 02-Algebra_and_Geometry_Explanation_for_CUTE_algebra
-.PHONY : 02-Algebra_and_Geometry_Explanation_for_CUTE_algebra
-
-# fast build rule for target.
-02-Algebra_and_Geometry_Explanation_for_CUTE_algebra/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/02-Algebra_and_Geometry_Explanation_for_CUTE_algebra.dir/build.make CMakeFiles/02-Algebra_and_Geometry_Explanation_for_CUTE_algebra.dir/build
-.PHONY : 02-Algebra_and_Geometry_Explanation_for_CUTE_algebra/fast
-
 01-Layout_for_CUTE/layout.o: 01-Layout_for_CUTE/layout.cu.o
 .PHONY : 01-Layout_for_CUTE/layout.o
 
@@ -166,30 +153,6 @@ depend:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/01-Layout_for_CUTE_layout.dir/build.make CMakeFiles/01-Layout_for_CUTE_layout.dir/01-Layout_for_CUTE/layout.cu.s
 .PHONY : 01-Layout_for_CUTE/layout.cu.s
 
-02-Algebra_and_Geometry_Explanation_for_CUTE/algebra.o: 02-Algebra_and_Geometry_Explanation_for_CUTE/algebra.cu.o
-.PHONY : 02-Algebra_and_Geometry_Explanation_for_CUTE/algebra.o
-
-# target to build an object file
-02-Algebra_and_Geometry_Explanation_for_CUTE/algebra.cu.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/02-Algebra_and_Geometry_Explanation_for_CUTE_algebra.dir/build.make CMakeFiles/02-Algebra_and_Geometry_Explanation_for_CUTE_algebra.dir/02-Algebra_and_Geometry_Explanation_for_CUTE/algebra.cu.o
-.PHONY : 02-Algebra_and_Geometry_Explanation_for_CUTE/algebra.cu.o
-
-02-Algebra_and_Geometry_Explanation_for_CUTE/algebra.i: 02-Algebra_and_Geometry_Explanation_for_CUTE/algebra.cu.i
-.PHONY : 02-Algebra_and_Geometry_Explanation_for_CUTE/algebra.i
-
-# target to preprocess a source file
-02-Algebra_and_Geometry_Explanation_for_CUTE/algebra.cu.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/02-Algebra_and_Geometry_Explanation_for_CUTE_algebra.dir/build.make CMakeFiles/02-Algebra_and_Geometry_Explanation_for_CUTE_algebra.dir/02-Algebra_and_Geometry_Explanation_for_CUTE/algebra.cu.i
-.PHONY : 02-Algebra_and_Geometry_Explanation_for_CUTE/algebra.cu.i
-
-02-Algebra_and_Geometry_Explanation_for_CUTE/algebra.s: 02-Algebra_and_Geometry_Explanation_for_CUTE/algebra.cu.s
-.PHONY : 02-Algebra_and_Geometry_Explanation_for_CUTE/algebra.s
-
-# target to generate assembly for a file
-02-Algebra_and_Geometry_Explanation_for_CUTE/algebra.cu.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/02-Algebra_and_Geometry_Explanation_for_CUTE_algebra.dir/build.make CMakeFiles/02-Algebra_and_Geometry_Explanation_for_CUTE_algebra.dir/02-Algebra_and_Geometry_Explanation_for_CUTE/algebra.cu.s
-.PHONY : 02-Algebra_and_Geometry_Explanation_for_CUTE/algebra.cu.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -199,13 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... 01-Layout_for_CUTE_layout"
-	@echo "... 02-Algebra_and_Geometry_Explanation_for_CUTE_algebra"
 	@echo "... 01-Layout_for_CUTE/layout.o"
 	@echo "... 01-Layout_for_CUTE/layout.i"
 	@echo "... 01-Layout_for_CUTE/layout.s"
-	@echo "... 02-Algebra_and_Geometry_Explanation_for_CUTE/algebra.o"
-	@echo "... 02-Algebra_and_Geometry_Explanation_for_CUTE/algebra.i"
-	@echo "... 02-Algebra_and_Geometry_Explanation_for_CUTE/algebra.s"
 .PHONY : help
 
 

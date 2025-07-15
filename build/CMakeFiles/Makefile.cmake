@@ -50,5 +50,4 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/01-Layout_for_CUTE_layout.dir/DependInfo.cmake"
-  "CMakeFiles/02-Algebra_and_Geometry_Explanation_for_CUTE_algebra.dir/DependInfo.cmake"
   )

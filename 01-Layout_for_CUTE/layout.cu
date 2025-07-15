@@ -1,6 +1,52 @@
 #include "cute/layout.hpp"
 int main(int argc, char const *argv[])
 {
+    // Fundamental Types and Concepts
+    // Integers
+    // 两种使用cute常量的方式
+    if(cute::Int<1>{} == cute::_1{})
+    {
+        printf("cute::Int<1>{} == cute::_1{}\n");
+    }
+    else
+    {
+        printf("cute::Int<1>{} != cute::_1{}\n");
+    }
+
+    // 判断是否为静态或动态整数类型
+    printf("cute::is_integral<cute::Int<1>>::value: %d\n", cute::is_integral<cute::Int<1>>::value);
+    printf("cute::is_integral<int>::value: %d\n", cute::is_integral<int>::value);
+    // 判断是否是动态整数类型
+    printf("cute::is_std_integral<cute::Int<1>>::value: %d\n", cute::is_std_integral<cute::Int<1>>::value);
+    printf("cute::is_std_integral<int>::value: %d\n", cute::is_std_integral<int>::value);
+    // 判断是否是空类型，没有成员的类型
+    printf("cute::is_static<cute::Int<1>>::value: %d\n", cute::is_static<cute::Int<1>>::value);
+    // 判断是否是常量
+    printf("cute::is_constant<1, cute::Int<1>>::value: %d\n", cute::is_constant<1, cute::Int<1>>::value);
+
+    // IntTuples
+    auto int_tuple = cute::make_tuple(uint16_t{42}, cute::make_tuple(cute::Int<1>{}, int32_t{3}), cute::Int<17>{});
+    printf("int_tuple: ");
+    cute::print(int_tuple);
+    printf("\n");
+
+    // 获取int_tuple的元素个数
+    printf("int_tuple的元素个数: ");    
+    cute::print(cute::rank(int_tuple));
+    printf("\n");
+    // 获取int_tuple的第0个元素
+    printf("int_tuple的第0个元素: ");
+    cute::print(cute::get<0>(int_tuple));
+    printf("\n");
+    // 获取int_tuple的深度
+    printf("int_tuple的深度: ");
+    cute::print(cute::depth(int_tuple));
+    printf("\n");
+    // 获取product（类似向量的大小）
+    printf("int_tuple的所有元素的product: ");
+    cute::print(cute::size(int_tuple));
+    printf("\n");    
+
     // 常量shape
     auto shape = cute::make_shape(cute::Int<2>{}, cute::Int<4>{});
     printf("常量shape: ");
@@ -61,9 +107,16 @@ int main(int argc, char const *argv[])
     printf("嵌套layout: ");
     cute::print(layout);
     printf("\n");
-    printf("layout详细信息: ");
+    printf("layout的实际存储大小: ");
+    cute::print(cute::cosize(layout));  
+    printf("\n");
+    // 打印layout排布
+    printf("layout排布: ");
     cute::print_layout(layout);
     printf("\n");
+
+    
+
 
     return 0;
 }

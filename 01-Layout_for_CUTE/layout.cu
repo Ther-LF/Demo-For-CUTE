@@ -1,4 +1,24 @@
 #include "cute/layout.hpp"
+
+template <class Shape, class Stride>
+void print2D(cute::Layout<Shape,Stride> const& layout)
+{
+  for (int m = 0; m < cute::size<0>(layout); ++m) {
+    for (int n = 0; n < cute::size<1>(layout); ++n) {
+      printf("%3d  ", layout(m,n));
+    }
+    printf("\n");
+  }
+}
+
+template <class Shape, class Stride>
+void print1D(cute::Layout<Shape,Stride> const& layout)
+{
+  for (int i = 0; i < cute::size(layout); ++i) {
+    printf("%3d  ", layout(i));
+  }
+}
+
 int main(int argc, char const *argv[])
 {
     // Fundamental Types and Concepts
@@ -115,8 +135,13 @@ int main(int argc, char const *argv[])
     cute::print_layout(layout);
     printf("\n");
 
-    
+    // 打印layout的2D和1D排布
+    print2D(layout);
+    printf("\n");
+    print1D(layout);
+    printf("\n");
 
+    
 
     return 0;
 }
